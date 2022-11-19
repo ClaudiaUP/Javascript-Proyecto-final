@@ -1,0 +1,10 @@
+[
+    {"id":1, "nombre": "Alanso", "precio":850, "cantidad":1, "img": "./imagenes/alanso.jpg"},
+    {"id":2, "nombre": "Giveaway", "precio":1000, "cantidad":1,  "img": "./imagenes/giveaway.jpg"},
+    {"id":3, "nombre": "Reprogenes", "precio":1350, "cantidad":1, "img": "./imagenes/reprogenes.jpg"},
+    {"id":4, "nombre": "Select", "precio":920,"cantidad":1,  "img": "./imagenes/select.jpg"},
+    {"id":5, "nombre": "Warrent", "precio":1400, "cantidad":1, "img": "./imagenes/warrent.jpg"},
+    {"id":6, "nombre": "Beatle", "precio":700,"cantidad":1, "img": "./imagenes/beatle.jpg"},
+    {"id":7, "nombre": "Brave", "precio":1280,"cantidad":1, "img": "./imagenes/brave.jpg"},
+    {"id":8, "nombre": "House", "precio":1005,"cantidad":1, "img": "./imagenes/house.jpg"}
+]

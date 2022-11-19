@@ -1,0 +1,108 @@
+
+h1{
+    background-color: darkolivegreen;
+    color: white;
+    text-align: center;
+
+}
+
+.colorLetra ul li a{
+    padding: 0.1rem 0.1rem;
+    transition: all 0.4s linear;
+    
+} 
+
+.colorLetra{
+    color: red;
+}
+
+.colorLetra ul li a:hover{
+    background-color: lightgreen
+
+}
+
+
+.imgProductos{
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+    margin-top: 0.5rem;
+}
+
+.imgProductos2{
+    width: 100px;
+    height: 150px;
+    object-fit: contain;
+    margin-top: 1rem;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 400px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    border: 1px solid darkolivegreen;
+}
+
+
+
+
+
+.colorBoton{
+    color: white;
+    background-color: darkolivegreen;
+}
+
+.colorBoton1{
+    color: white;
+    background-color: darkolivegreen;
+}
+
+.colorBoton:hover{
+    background-color: darkolivegreen ;
+    color:white;
+}
+
+.ubicacion{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.tamanioColor{
+    font-size: 30px;
+    color: darkolivegreen;
+    
+}
+
+
+.separacion{
+    margin-bottom: 400px
+}
+
+.recuadro{
+    border: 2px solid darkolivegreen;
+    width: 500px;
+
+}
+
+#total{
+    font-size: 40px;
+}
+
+.centrar{
+    text-align: center;
+}
+
+.ponerDerecha{
+    text-align: right;
+}
+
+.card-body{
+    height: 100px;
+}
+
+
+
+
