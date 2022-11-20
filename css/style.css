@@ -6,6 +6,23 @@ h1{
 
 }
 
+.espacioTop{
+    margin-top: 50px;
+}
+
+.espacioButtom{
+    margin-bottom: 50px;
+}
+
+.fondo{
+    background-color: #eaf7a6;
+}
+
+.lineaGruesa{
+    border: 3px solid darkgreen; 
+    
+}
+
 .imgProductos{
     width: 150px;
     height: 200px;
@@ -25,9 +42,9 @@ h1{
     align-items: center;
     width: 200px;
     height: 400px;
-    margin-bottom: 30px;
+    margin: 40px;
     padding-left: 10px;
-    border: 1px solid darkolivegreen;
+    border: 2px solid darkolivegreen;
 }
 
 
@@ -39,7 +56,7 @@ h1{
 
 .colorBoton1{
     color: white;
-    background-color: red;
+    background-color: gray;
     width: 140px;
     height: 60px;
     margin: 40px;
@@ -57,7 +74,7 @@ h1{
 
 .colorBoton2{
     color: white;
-    background-color: blue;
+    background-color: darkolivegreen;
     width: 140px;
     height: 60px;
     margin: 40px;
@@ -86,11 +103,7 @@ h1{
     margin-bottom: 400px
 }
 
-.recuadro{
-    border: 2px solid darkolivegreen;
-    width: 500px;
 
-}
 
 #total{
     font-size: 40px;

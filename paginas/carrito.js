@@ -8,22 +8,22 @@ fetch (listadoBulls)
     .then(respuesta => respuesta.json())
     .then((datos) => {
     mostrarToros(datos) 
-    })
+})
 
-//creo array carrito
+//Creo un array carrito
 let carrito = []
 
 recoverFromLocalStorage()
 
 
 
-//funcion para mostrar productos
+//Función para mostrar productos
 function mostrarToros(datos){
     datos.forEach((producto)=>{
         const card =document.createElement("div")
         card.classList.add("col-xl-3","col-md-6","col-xs-12")
         card.innerHTML=`
-            <div class="card">
+            <div class="card espacioTop">
                 <img src= "${producto.img}" class="card-img-top imgProductos" alt="${producto.nombre}">
                 <div class="card-body">
                 <h5 class="card-title centrar"> ${producto.nombre} </h5>
@@ -34,7 +34,7 @@ function mostrarToros(datos){
         `
         contenedorToros.appendChild(card)
 
-        //agregar productos al carrito
+        //Agregar productos al carrito
         const boton = document.getElementById(`boton${producto.id}`)
         boton.addEventListener("click",()=> {
             agregarAlCarrito(producto.id)
@@ -97,7 +97,7 @@ const mostrarCarrito=()=>{
         `
         contenedorCarrito.appendChild(card)
 
-        //eliminar productos del carrito
+        //Eliminar productos del carrito
 
         const boton=document.getElementById(`eliminar${producto.id}`)
         boton.addEventListener("click", ()=> {
@@ -131,21 +131,14 @@ const eliminarDelCarrito = (id) => {
     
 }
 
-//vacias carrito de compras
+//Vacias carrito de compras
 
 const vaciarCarrito = document.getElementById("vaciarCarrito")
 vaciarCarrito.addEventListener("click", ()=> {
     eliminarTodoElCarrito()
 
     localStorage.clear()
-})
 
-const eliminarTodoElCarrito=()=>{
-    carrito.forEach((producto) =>{
-        producto.cantidad=1
-        carrito=[]
-    mostrarCarrito()
-    localStorage.clear()
     Toastify({
         text:"Se ha vaciado el carrito",
         duration:3000,
@@ -157,12 +150,18 @@ const eliminarTodoElCarrito=()=>{
         }
 
     }).showToast()
+})
 
-    })
-    
+const eliminarTodoElCarrito=()=>{
+    carrito.forEach((producto) =>{
+        producto.cantidad=1
+        carrito=[]
+    mostrarCarrito()
+    localStorage.clear()
+    })   
 }
 
-//total de la compra
+//Total de la compra
 const total=document.getElementById("total")
 const calcularTotal = () => {
     fetch(listadoBulls)
@@ -180,7 +179,7 @@ const calcularTotal = () => {
 
 
 
-// recuperar del localStorage
+// Recuperar del localStorage
 function recoverFromLocalStorage(){
     if (localStorage.getItem("carrito")){
         carrito=JSON.parse(localStorage.getItem("carrito"))
@@ -189,7 +188,7 @@ function recoverFromLocalStorage(){
 
 
 
-// guardar del localStorage
+// Guardar del localStorage
 function saveToLocalStorage(){
     localStorage.setItem("carrito",JSON.stringify(carrito))
 }
