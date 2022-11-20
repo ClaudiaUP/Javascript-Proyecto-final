@@ -26,9 +26,9 @@ function mostrarToros(datos){
             <div class="card">
                 <img src= "${producto.img}" class="card-img-top imgProductos" alt="${producto.nombre}">
                 <div class="card-body">
-                <h5 class="card-title"> ${producto.nombre} </h5>
-                <p class="card-text">$ ${producto.precio} </p>
-                <button class="btn colorBoton" id="boton${producto.id}">Agregar al Carrito</button>
+                <h5 class="card-title centrar"> ${producto.nombre} </h5>
+                <p class="card-text centrar">$ ${producto.precio} </p>
+                <button class="btn colorBoton" id="boton${producto.id}">Comprar</button>
                 </div>
             </div>
         `
@@ -85,17 +85,15 @@ const mostrarCarrito=()=>{
     contenedorCarrito.innerHTML=""
     carrito.forEach((producto)=>{
         const card =document.createElement("div")
-        card.classList.add("col-xl-3","col-md-6","col-xs-12")
+        card.classList.add("row")
         card.innerHTML = `
-            <div class="card">
-                <img src= "${producto.img}" class="card-img-top imgProductos2" alt="${producto.nombre}">
-                <div class="card-body">
-                <h6 class="card-title"> ${producto.nombre} </h6>
-                <p class="card-text"> ${producto.precio} </p>
-                <p class="card-text"> ${producto.cantidad} </p>
-                <button class="btn colorBoton" id="eliminar${producto.id}">Elimiar Producto</button>
-                </div>
-            </div>
+        <div class="col-3  d-flex align-item-center p-2">
+        <img src="${producto.img}" width="60" alt="${producto.nombre}">  </div>
+        <div class="col-3 d-flex align-item-center ">${producto.nombre}</div>
+        <div class="col-2 d-flex align-item-center justify-content-center ">${producto.precio}</div>
+        <div class="col-1 d-flex align-item-center justify-content-center "> ${producto.cantidad}</div>
+          <div class="col-2">
+        <button class="btn colorBoton" id="eliminar${producto.id}">Eliminar</button></div>
         `
         contenedorCarrito.appendChild(card)
 
@@ -148,6 +146,18 @@ const eliminarTodoElCarrito=()=>{
         carrito=[]
     mostrarCarrito()
     localStorage.clear()
+    Toastify({
+        text:"Se ha vaciado el carrito",
+        duration:3000,
+        gravity:"top",
+        position:"center",
+        style:
+        {
+            background:"red",
+        }
+
+    }).showToast()
+
     })
     
 }
