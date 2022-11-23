@@ -43,7 +43,7 @@ function mostrarToros(datos){
                 text:"Producto seleccionado",
                 duration:5000,
                 gravity:"bottom",
-                position:"right",
+                position:"left",
                 style:
                 {
                     background:"#7fff00",
@@ -173,6 +173,21 @@ const calcularTotal = () => {
             })
             
         total.innerHTML = `$${totalCompra}`
+
+        const finalizarCompra = document.getElementById("finalizarCompra");
+
+        finalizarCompra.addEventListener("click",() => {
+        Swal.fire({
+                   title:`Compra finalizada`,
+                   text:`Gracias por utilizar nuestros servicios`,
+                   backdrop: `rgb(85,107,47)`,
+                   background: `#eaf7a6`,
+                   icon: `success`,
+                   confirmButtonText:`Aceptar`,
+                   
+            
+                })
+            })
         
         })
 }

@@ -75,8 +75,8 @@ h1{
 .colorBoton2{
     color: white;
     background-color: darkolivegreen;
-    width: 140px;
-    height: 60px;
+    width: 180px;
+    height: 70px;
     margin: 40px;
 }
 
@@ -92,11 +92,11 @@ h1{
     margin-bottom: 40px;
 }
 
-.tamanioLetraSw{
+/* .tamanioLetraSw{
     font-size: 30px;
     color: red;
     
-}
+} */
 
 
 .separacion{
@@ -125,6 +125,38 @@ h1{
     width: 30px;
    
 }
+
+.tamanioVaciar{
+    width: 100px;
+    height: 70px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.enLineaBotones{
+    display: flex;
+    flex-wrap;
+    justify-content: center;
+}
+
+.fa-sharp{
+    font-size: 20px;
+    color: white;
+    margin-right: 10px;
+}
+
+.centrar{
+    display: flex;
+    flex-wrap;
+    justify-content: center;
+}
+
+.achicar{
+    color: blue;
+   
+}
+
+.btn-close
 
 
 

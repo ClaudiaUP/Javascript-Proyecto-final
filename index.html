@@ -9,6 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
     
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -28,12 +33,24 @@
           <a class="navbar-brand" href="#"><img src="imagenes/logoToldos.jpg" class="sm me-auto" alt="logo"></a>
         </div>
 
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          
+          <button class="colorBoton2 ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="verCarrito">
+                      
+            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+              Mostrar carrito 
+            <!-- <span class="badge bg-dark text-white ms-1 rounded-pill">3</span> -->
+          </button>
+
+        </div>
+
       </nav>   
 
               
   </header>
 
-  <main class="container  ">
+
+  <main class="container">
        
 
 <!-- Carrito de Compras -->
@@ -45,26 +62,32 @@
 
         <hr class="lineaGruesa">
         
-        <button class="colorBoton1 ubicacion" id="vaciarCarrito">Vaciar Carrito</button> 
-
-        <button class="colorBoton2 ubicacion" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="verCarrito" >Ver carrito</button>
+        
       
               
         
 <!-- offcanvas -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"    aria-labelledby="offcanvasRightLabel">
 
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de Compras</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="offcanvas-header centrar">
+              <h3 class="offcanvas-title" id="offcanvasRightLabel">Carrito de Compras</h3>
+              <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
         
             <div class="offcanvas-header">
-              <h3 class="offcanvas-title"> Total de la compra:  <span id="total">0</span></h3>
+              <h4 class="offcanvas-title"> Total de la compra:  <span class="achicar" id="total">0</span></h4>
             </div>
         
             <div class="offcanvas-body" id="contenedorCarrito"></div> 
+        
+
+
+        <div class="enLineaBotones">
+          <button class="colorBoton1 tamanioVaciar" id="vaciarCarrito">Vaciar Carrito</button>
+          <button class="colorBoton2 tamanioVaciar" id="finalizarCompra">Finalizar</button>
         </div>
+
+      </div>
 
 
 
